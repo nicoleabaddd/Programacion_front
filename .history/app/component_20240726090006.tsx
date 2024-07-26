@@ -1,5 +1,5 @@
 'use client'
-import {onsumit, onsumitPost} from './hook';
+import {onsumit} from './hook';
 
 export function Profile() {
     return (
@@ -27,13 +27,8 @@ export function Botton(){
     )
   };
 
-export function BottonSend(){
-  return(
-    <button type= "button" onClick={onsumitPost}>
-      llamar post
-    </button>
-  )
-};
+export function BottonSend()´
+  
   
 export default function Components(){
     return (
@@ -41,7 +36,6 @@ export default function Components(){
             <Profile/>
             <Tabla/>
             <Botton/>
-            <BottonSend/>
         </section>
     );
   }

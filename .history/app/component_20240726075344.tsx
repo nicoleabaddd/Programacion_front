@@ -1,7 +1,7 @@
-'use client'
-import {onsumit, onsumitPost} from './hook';
+import { defaultOverrides } from "next/dist/server/require-hook";
+import {onsumit} from './hook';
 
-export function Profile() {
+function Profile() {
     return (
       <img
         src="https://i.imgur.com/MK3eW3As.jpg"
@@ -9,8 +9,7 @@ export function Profile() {
       />
     );
   }
-
-export function Tabla(){
+  function Tabla(){
     return(
       <table>
         <th>Tabla de ejemplo</th>
@@ -18,31 +17,21 @@ export function Tabla(){
       </table>
     );
   }
-  
-export function Botton(){
+
+  export function Botton(){
     return(
-      <button type="button" onClick={onsumit}>
+      <button type="button" onSubmit={}>
         enviar info
       </button>
     )
   };
 
-export function BottonSend(){
-  return(
-    <button type= "button" onClick={onsumitPost}>
-      llamar post
-    </button>
-  )
-};
-  
-export default function Components(){
+  export default function Components(){
     return (
         <section>
             <Profile/>
             <Tabla/>
             <Botton/>
-            <BottonSend/>
         </section>
     );
   }
-  

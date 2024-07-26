@@ -30,7 +30,7 @@ export function Botton(){
 export function BottonSend(){
   return(
     <button type= "button" onClick={onsumitPost}>
-      llamar post
+      llamarpost
     </button>
   )
 };

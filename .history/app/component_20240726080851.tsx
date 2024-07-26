@@ -1,5 +1,7 @@
 'use client'
-import {onsumit, onsumitPost} from './hook';
+
+import { defaultOverrides } from "next/dist/server/require-hook";
+import {onsumit} from './hook';
 
 export function Profile() {
     return (
@@ -26,14 +28,6 @@ export function Botton(){
       </button>
     )
   };
-
-export function BottonSend(){
-  return(
-    <button type= "button" onClick={onsumitPost}>
-      llamar post
-    </button>
-  )
-};
   
 export default function Components(){
     return (
@@ -41,7 +35,6 @@ export default function Components(){
             <Profile/>
             <Tabla/>
             <Botton/>
-            <BottonSend/>
         </section>
     );
   }
